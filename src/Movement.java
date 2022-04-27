@@ -39,11 +39,9 @@ public class Movement implements MouseListener, MouseMotionListener {
         final int MIN_X = Board.BOARD_START_X + Board.LINE_THICKNESS - CORRECTION;
         final int MIN_Y = Board.BOARD_START_Y + Board.LINE_THICKNESS - CORRECTION;
 
-
-
-
         if (canMove) {
-            if (e.getComponent().getWidth() <= MAX_CAR_SIZE && e.getComponent().getHeight() <= MAX_CAR_SIZE) {
+            //רק מלבן שאורך ורוחב לא גדול מ- 360 יכול לזוז
+            if ((e.getComponent().getWidth() <= MAX_CAR_SIZE) && (e.getComponent().getHeight() <= MAX_CAR_SIZE)) {
                 //בודק שהמצביע בתוך האובייקט
                 collision(components, e.getComponent(), previousPoint);
                 previousPoint = e.getComponent().getLocation();
