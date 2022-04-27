@@ -6,9 +6,8 @@ public abstract class Level extends JFrame {
     public final String CY ="yCar";
     public final String TX ="xTruck";
     public final String TY ="yTruck";
-    public final String END_LEVEL = "endLevel";
 
-    protected Car endLevel;
+
 
     protected Car xCar;
     protected Car aCar;

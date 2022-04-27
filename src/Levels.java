@@ -8,16 +8,16 @@ public class Levels extends Level{
 
    public Levels(int level)
     {
-        endLevel = new Car(END_LEVEL,3,6,Color.WHITE);
-            switch (level) {
-                case LEVEL_1 -> {
+        switch (level) {
+                case LEVEL_1: {
                     level1();
+                    break;
                 }
-                case LEVEL_2 -> {
+                case LEVEL_2: {
                     level2();
+                    break;
                 }
             }
-
     }
     public void level1(){
         xCar = new Car(CX,3,2,Color.red);
@@ -29,7 +29,7 @@ public class Levels extends Level{
         qTruck = new Car(TY,2,4,Color.blue);
         rTruck = new Car(TX,6,3,Color.green);
 
-        setCars(new Car[]{xCar, aCar, bCar, cCar, oTruck, pTruck, qTruck, rTruck,endLevel});
+        setCars(new Car[]{xCar, aCar, bCar, cCar, oTruck, pTruck, qTruck, rTruck});
     }
     public void level2(){
         xCar=new Car(CX,3,1, Color.red);
@@ -44,7 +44,7 @@ public class Levels extends Level{
         pTruck=new Car(TY,2,6,Color.magenta);
         qTruck=new Car(TX,4,1,Color.blue);
 
-        setCars(new Car[]{xCar, aCar,bCar, cCar, dCar, eCar, fCar, gCar, oTruck, pTruck, qTruck,endLevel});
+        setCars(new Car[]{xCar, aCar,bCar, cCar, dCar, eCar, fCar, gCar, oTruck, pTruck, qTruck});
     }
 
     public int getLevel() {

@@ -37,10 +37,6 @@ public class Car {
         } else if (Objects.equals(carType_xCar_yCar_xTruck_yTruck, "yTruck")) {
             car.setWidth(CAR_Y_WIDTH - CORRECTION);
             car.setHeight(LONG_CAR_Y_HEIGHT - CORRECTION);
-        }else if (Objects.equals(carType_xCar_yCar_xTruck_yTruck, "endLevel")) {
-            car.setX(795);
-            car.setWidth(20);
-            car.setHeight(110);
         }
     }
 
@@ -48,11 +44,5 @@ public class Car {
         return car;
     }
 
-    /*public boolean endLevel(Car car){
-        boolean end = false;
-        Rectangle redCar = new Rectangle(car.)
-        if(car.)
 
-        return end;
-    }*/
 }

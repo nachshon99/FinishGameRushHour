@@ -5,7 +5,7 @@ public class FinishGamePanel extends JPanel{
 
     public FinishGamePanel(){
         this.setBounds(Main.WINDOW_WIDTH/4,Main.WINDOW_HEIGHT/3,500,250);
-        this.setBackground(Color.BLUE);
+        this.setBackground(Color.GRAY);
         this.setLayout(null);
         this.setDoubleBuffered(true);
 

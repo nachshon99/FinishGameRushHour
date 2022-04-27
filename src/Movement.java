@@ -40,7 +40,7 @@ public class Movement implements MouseListener, MouseMotionListener {
         final int MIN_Y = Board.BOARD_START_Y + Board.LINE_THICKNESS - CORRECTION;
 
 
-        canMove= !e.getComponent().contains(endingPlace.getX(), endingPlace.getY());
+
 
         if (canMove) {
             if (e.getComponent().getWidth() <= MAX_CAR_SIZE && e.getComponent().getHeight() <= MAX_CAR_SIZE) {
@@ -94,7 +94,7 @@ public class Movement implements MouseListener, MouseMotionListener {
                 if (componentRect.intersects(valueRect))
                 {
                     counter++;
-                    if (componentRect.contains(endingPlace.getX()-5,endingPlace.getY()+5))
+                    if (componentRect.contains(endingPlace.getX()-10,endingPlace.getY()+5))
                     //  בודק אם הוא מכיל את נקודת הניצחון
                     {
                         this.isWin=true;

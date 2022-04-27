@@ -13,6 +13,7 @@ public class GameScene extends JPanel implements  Runnable {
     public Movement mv;
     public EndLevel endLevel;
     public NextLevelPanel nextLevelPanel;
+    public FinishGamePanel finishGamePanel;
     public Board board;
     public Main main;
     public boolean changeLevel;
@@ -23,8 +24,6 @@ public class GameScene extends JPanel implements  Runnable {
 
 
     public GameScene(Main main,int levelNum,boolean isNewLevel){
-        FinishGamePanel finishGamePanel = new FinishGamePanel();
-        this.add(finishGamePanel);
 
         this.menuPanel =new MenuPanel(0, 0, Main.WINDOW_WIDTH, Main.WINDOW_HEIGHT);
         this.levelNum=levelNum;
@@ -43,6 +42,11 @@ public class GameScene extends JPanel implements  Runnable {
         this.nextLevelPanel=nextLevelPanel;
         nextLevelPanel.setVisible(false);
         this.add(nextLevelPanel);
+
+        finishGamePanel = new FinishGamePanel();
+        finishGamePanel.setVisible(false);
+        this.add(finishGamePanel);
+
         this.getPanels();
         this.getBoard();
 
@@ -53,8 +57,6 @@ public class GameScene extends JPanel implements  Runnable {
 
         menuPanel.setVisible(!isNewLevel);
         //אם זה לבל חדש הוא לא מציג את הפאנל של התפריט הראשי
-
-
 
         setVisible(true);
 
@@ -118,7 +120,11 @@ public class GameScene extends JPanel implements  Runnable {
     {
         if (mv.isWin)
         {
-            nextLevelPanel.setVisible(true);
+            if(levelNum == 1){
+                nextLevelPanel.setVisible(true);
+            }else{
+                finishGamePanel.setVisible(true);
+            }
             mv.setCanMove(false);
             mv.isWin=false;
 

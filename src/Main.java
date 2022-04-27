@@ -13,7 +13,7 @@ public class Main extends JFrame{
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setLayout(null);
-        GameScene gameScene = new GameScene(this,1,false);
+        GameScene gameScene = new GameScene(this,Levels.LEVEL_1,false);
         this.add(gameScene);
         this.setVisible(true);
     }
